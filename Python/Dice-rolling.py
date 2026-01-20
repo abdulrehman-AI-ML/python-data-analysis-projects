@@ -2,6 +2,7 @@
 
 import random
 count = 0
+#loop
 while True:
     print('Roll the Dice (y/n)')
     user =  input(">").lower()
