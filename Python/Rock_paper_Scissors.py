@@ -16,7 +16,7 @@ while True:
         break
     #start
     else:
-        #simple moves with some conditions 
+        #simple moves with some conditions 222
         print("Choose your move Rook ,Paper ,Scissor")
         person = input("> ").lower()
         if computer  == person:
