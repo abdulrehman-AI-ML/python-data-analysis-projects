@@ -1,9 +1,9 @@
 import random 
-
+#Date = jan 20 ,2025
 computer = random.randint(1,5)
 print('You have 5 try to guess the number from 1 to 100')
 trys = 5
-
+#loop
 while True:
     try:
         user = int(input("Guess the number: "))
