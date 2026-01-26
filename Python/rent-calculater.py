@@ -14,6 +14,7 @@ persons = int(input("Enter the number of persons living in room: "))
 total_bill = electricity_Spend * charge_per_unit
 
 ##OutPut
+#####
 
 output = (food + rent + total_bill)//persons
 
