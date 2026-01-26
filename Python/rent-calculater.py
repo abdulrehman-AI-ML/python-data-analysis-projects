@@ -15,7 +15,7 @@ total_bill = electricity_Spend * charge_per_unit
 
 ##OutPut
 #####
-
+#Calculating the total amount each person has to pay
 output = (food + rent + total_bill)//persons
 
 #Total amount you've to pay is 
