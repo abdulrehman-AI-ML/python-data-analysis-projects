@@ -19,7 +19,7 @@ def delete():
     with open("file.txt", "r") as f:
         lines = f.readlines()
 
-    # Rewrite file without the deleted task
+    # Rewrite file without the deleted taska
     with open("file.txt", "w") as f:
         found = False
         for line in lines:
