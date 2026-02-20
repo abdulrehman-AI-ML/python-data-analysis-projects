@@ -9,3 +9,4 @@ def new():
 
 if main == '1' or main == "new account":
     pin = input("set you pin:")
+    #addasdadsada
