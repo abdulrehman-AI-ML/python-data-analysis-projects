@@ -11,8 +11,14 @@ def new():
     print('Your account is opend')
     edit_acc = int(input('View or add money (1,2):'))
     if edit_acc == 1:
-        with open (file_path) as f:
+        with open (file_path,'r') as f:
             print(f.read())
+    elif edit_acc == 2:
+        n_add_balance = int(input("Enter you balance:"))
+        with open (file_path,'a') as f:
+            print(f.write(n_add_balance))
+    else :
+        print("Something is wrong!")
     
 
 
