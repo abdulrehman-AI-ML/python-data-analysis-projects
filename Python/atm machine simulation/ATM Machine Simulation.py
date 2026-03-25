@@ -20,10 +20,17 @@ def new():
     else :
         print("Something is wrong!")
 
-
-if main == '1' or main == "new account":
+def New():
     pin = input("set you pin:")
     with open(f'M:\repos\python-data-analysis-projects\Python\atm machine simulation\accounts\{pin}','r') as f:
         f.read()
     print("Your account is opend")
     edit_acc = int(input('View or add money (1,2):'))
+    if edit_acc == 1:
+        with open(f'M:\repos\python-data-analysis-projects\Python\atm machine simulation\accounts\{pin}','r') as f:
+            f.read()
+    elif edit_acc == 2 :
+        with open (f'M:\repos\python-data-analysis-projects\Python\atm machine simulation\accounts\{pin}','a') as f:
+            n_add_balance = int(input("Enter you balance:"))
+            f.write(n_add_balance)
+            print(f"{n_add_balance} has been added to your account")
