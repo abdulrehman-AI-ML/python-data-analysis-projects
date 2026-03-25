@@ -19,11 +19,11 @@ def new():
             print(f.write(n_add_balance))
     else :
         print("Something is wrong!")
-    
-
-
 
 
 if main == '1' or main == "new account":
     pin = input("set you pin:")
     with open(f'M:\repos\python-data-analysis-projects\Python\atm machine simulation\accounts\{pin}','r') as f:
+        f.read()
+    print("Your account is opend")
+    edit_acc = int(input('View or add money (1,2):'))
