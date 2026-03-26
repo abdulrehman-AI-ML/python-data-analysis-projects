@@ -3,11 +3,12 @@ import time
 
 
 def existed():
-    setpin = input("Enter your pin(Enter e to exist): ")
-    print("checking...")
-    time.sleep(2)
+
+
     while True:
-        
+        setpin = input("Enter your pin(Enter e to exist): ")
+        print("checking...")
+        time.sleep(2)
         if os.path.exists(fr"M:\repos\python-data-analysis-projects\Python\atm machine simulation\accounts\{setpin}.txt") :
             print("account is found")
             with open(fr"M:\repos\python-data-analysis-projects\Python\atm machine simulation\accounts\{setpin}.txt",'r') as f:
@@ -16,7 +17,7 @@ def existed():
             if mainu in ('view',"1"):
                 with open(fr"M:\repos\python-data-analysis-projects\Python\atm machine simulation\accounts\{setpin}.txt",'r') as f:
                    cur_bal =float(f.read())
-                   print(cur_bal)
+                   print(f"You have {cur_bal} in your account")
             elif mainu in ('add','2'):
                 with open(fr"M:\repos\python-data-analysis-projects\Python\atm machine simulation\accounts\{setpin}.txt",'r') as f:
                    cur_bal = float(f.read())
@@ -29,15 +30,19 @@ def existed():
                     print('amount has been added to you account.')
             elif mainu in ('withdraw','3'):
                 w_bal = float(input('enter the withdraw amount:'))
+                cur_bal = float(cur_bal)
                 if w_bal > cur_bal:
                     print("pls enter vail amount ")
                     print(f"you have {cur_bal}")
                 else:
                     cur_bal= cur_bal - w_bal
+                    cur_bal = str(cur_bal)
                     with open(fr"M:\repos\python-data-analysis-projects\Python\atm machine simulation\accounts\{setpin}.txt",'w') as f:
                         f.write(cur_bal)
                     print(f"{w_bal} has be withdraw now you have {cur_bal}")
-            
+        
+        elif setpin == "e":
+            break
         else:
             print("account is not found")
             print('try again')
@@ -61,6 +66,7 @@ def new():
     elif edit_acc in ('add money','2') :
         with open (fr'M:\repos\python-data-analysis-projects\Python\atm machine simulation\accounts\{pin}.txt','w') as f:
             n_add_balance = float(input("Enter you balance:"))
+            n_add_balance = str(n_add_balance)
             f.write(n_add_balance)
             print(f"{n_add_balance} has been added to your account")
     else:
